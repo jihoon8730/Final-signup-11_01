@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.h3 {
+    text-align: center;
+}
+.wrapper {
+    width: 320px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0px 20px;
+    background-color: aquamarine;
+    
+}
+
+.inputbox {
+    background-color: blue;
+    display: block;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-top: 20px;
+    border: 1px solid gray;
+}
+
+.error{
+    color: red;
+    font-size: 11px;
+    margin-top: 3px;
+}
+#error__gender {
+    text-align: center;
+}
+
+.phone__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
