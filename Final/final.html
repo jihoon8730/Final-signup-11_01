@@ -8,26 +8,26 @@
 <body>
     <div class="wrapper">
         <h3>코드캠프 회원가입</h3>
-        <input class="inputbox" placeholder="이메일을 입력해 주세요" />
+        <input class="inputbox" id="email" type="text" placeholder="이메일을 입력해 주세요" />
         <div class="error" id="error__email"></div>
-        <input class="inputbox" placeholder="이름을 입력해 주세요" />
+        <input class="inputbox" id="writer" type="text" placeholder="이름을 입력해 주세요" />
         <div class="error" id="error__writer"></div>
-        <input class="inputbox" placeholder="비밀번호를 입력해 주세요" />
+        <input class="inputbox" id="password1" type="password" placeholder="비밀번호를 입력해 주세요" />
         <div class="error" id="error__password1"></div>
-        <input class="inputbox" placeholder="비밀번호를 다시 입력해 주세요" />
+        <input class="inputbox" id="password2" type="password" placeholder="비밀번호를 다시 입력해 주세요" />
         <div class="error" id="error__password2"></div>
         <div class="phone__wrapper">
-            <input id="phone1" type="text" onchange="changePhone1()" onkeyup="onchange()" />
-            <input id="phone2" type="text" onchange="changePhone2()" onkeyup="onchange()" />
+            <input id="phone1" type="text" onchange="changePhone1()" onkeyup="onchange()" /> -
+            <input id="phone2" type="text" onchange="changePhone2()" onkeyup="onchange()" /> -
             <input id="phone3" type="text" onchange="changePhone3()" onkeyup="onchange()" />
         </div>
         <div class="token__wrapper">
             <div class="token" id="token">0000000</div>
-            <button id="token__button" onclick="getToken()" disabled>인증확인</button>
+            <button id="token__button" onclick="getToken()" disabled>인증번호전송</button>
         </div>
         <div class="token__wrapper">
             <div class="token__timer" id="token__timer">3:00</div>
-            <button id="token__timer__confirm__button" onclick="getTokenTimerconfirm()" disabled>인증확인</button>
+            <button id="token__timer__confirm__button" onclick="getTokenTimerConfirm()" disabled>인증확인</button>
         </div>
         <div class="location__wrapper">
             <select class="location" id="location">

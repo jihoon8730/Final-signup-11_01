@@ -1,26 +1,25 @@
-function changePhone1(){
+function changePhone1() {
     const phone1 = document.getElementById("phone1").value
     if(phone1.length === 3) {
         document.getElementById("phone2").focus()
     }
 }
 
-function changePhone2(){
+function changePhone2() {
     const phone2 = document.getElementById("phone2").value
     if(phone2.length === 4) {
         document.getElementById("phone3").focus()
     }
 }
 
-function changePhone3(){
+function changePhone3() {
     const phone1 = document.getElementById("phone1").value
     const phone2 = document.getElementById("phone2").value
     const phone3 = document.getElementById("phone3").value
-    if(phone1.length === 3 && phone2.length === 4 && phone3.length === 4){
-        document.getElementById("token__button").style = "background-color: yellow; cursor: pointer;"
-        document.getElementById("token__button").removeAttribute("disabled")
+    if(phone1.length ===  3 && phone2.length === 4 && phone3.length === 4) {
+        document.getElementById("token__button").style = "background-color: yellow;"
+        document.getElementById("token__button").removeAttribute("disabled") 
     }
-
 }
 
 function getToken(){
@@ -35,11 +34,11 @@ function getToken(){
 }
 
 let interval;
-function getTokenTimer(){
+function getTokenTimer() {
     let timer = 10
     interval = setInterval(() => {
         if(timer >= 0){
-            const minutes = Math.floor(timer / 60)
+            const minutes = Math.floor(timer /60)
             const seconds = timer % 60
 
             document.getElementById("token__timer").innerText = minutes + ":" + String(seconds).padStart(2, "0")
@@ -48,17 +47,17 @@ function getTokenTimer(){
             document.getElementById("token").innerText = "000000"
             document.getElementById("token__button").style = ""
             document.getElementById("token__button").setAttribute("disabled", "true")
-            
+
             document.getElementById("token__timer").innerText = "3:00"
             document.getElementById("token__timer__confirm__button").style = ""
             document.getElementById("token__timer__confirm__button").setAttribute("disabled", "true")
-            
+
             clearInterval(interval)
         }
     }, 1000)
 }
 
-function getTokenTimerConfirm(){
+function getTokenTimerConfirm() {
     clearInterval(interval)
     document.getElementById("token__timer__confirm__button").style = "background-color: yellow; cursor: default;"
     document.getElementById("token__timer__confirm__button").setAttribute("disabled", "true")
@@ -80,7 +79,7 @@ function signup(){
 
     let isValid = true
     if(email.includes("@") === false) {
-        document.getElementById("error__email").innerText = "이메일이 올바르지 않습니다."
+        document.getElementById("error__email").innerText = "이메일이 올바르지 않습니다.."
         isValid = false
     } else {
         document.getElementById("error__email").innerText = ""
